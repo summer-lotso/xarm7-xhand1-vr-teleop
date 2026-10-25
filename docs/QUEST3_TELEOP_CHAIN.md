@@ -1,6 +1,6 @@
 # Meta Quest 3 → xArm7 + 左手 XHand1 遥操数采链路
 
-按 2026-10-08 的本地代码整理。工程路径为 `~/projects/quest3-xarm7-xhand1-capture`。
+按 2026-10-08 的本地代码整理。工程路径为 `~/projects/xarm7-xhand1-vr-teleop`。
 
 统一入口 `scripts/start_quest3_capture.py` 管理 USB 中继、XHand 接收器、录制器和 xArm 桥接器四个进程。它执行设备预检、按顺序等待进程就绪、保存日志，并在关键进程失败时清理整套流程。
 
@@ -99,7 +99,7 @@ XHand 通道把整只左手数据交给 RobotEra `retarget_data_meta_quest`，�
 
 ```bash
 conda activate xarm7-xhand1-deploy
-cd ~/projects/quest3-xarm7-xhand1-capture
+cd ~/projects/xarm7-xhand1-vr-teleop
 python scripts/check_arm_ready.py
 python scripts/start_quest3_capture.py \
   --task "Pick up object and place it in the tray" \

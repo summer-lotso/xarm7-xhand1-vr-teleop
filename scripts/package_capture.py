@@ -11,7 +11,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PREFIX = "quest3-xarm7-xhand1-capture"
+PREFIX = "xarm7-xhand1-vr-teleop"
 
 
 def source_files() -> list[Path]:
@@ -23,7 +23,7 @@ def source_files() -> list[Path]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "releases/quest3-xarm7-xhand1-capture-v0.1.0.zip")
+    parser.add_argument("--output", type=Path, default=ROOT / "releases/xarm7-xhand1-vr-teleop-v0.1.0.zip")
     args = parser.parse_args()
     output = args.output.expanduser().resolve()
     output.parent.mkdir(parents=True, exist_ok=True)

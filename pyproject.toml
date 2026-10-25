@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "quest3-xarm7-xhand1-capture"
+name = "xarm7-xhand1-vr-teleop"
 version = "0.1.0"
 description = "Meta Quest 3 USB teleoperation and LeRobot Dataset v2.1 capture for xArm7 and left XHand1"
 requires-python = ">=3.10,<3.11"

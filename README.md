@@ -1,6 +1,8 @@
-# Quest 3 · xArm7 · XHand1 Teleoperation & Capture
+# Quest 手追踪遥操与多视角示范采集
 
 使用 **Meta Quest 3 左手追踪**同时遥操 **xArm7 + 左手 XHand1**，采集三路 RGB 和机器人目标/反馈，直接保存为 **LeRobot Dataset v2.1**。
+
+仓库名：`xarm7-xhand1-vr-teleop`。本项目使用纯VR手追踪；Quest手柄＋Manus手套的联合遥操版本见 [xarm7-xhand1-teleop](https://github.com/summer-lotso/xarm7-xhand1-teleop)。两套方案使用不同输入链路，不能混用启动配置。
 
 统一入口管理四个进程：Quest USB 中继、XHand 厂商重定向包装器、xArm 桥接器和录制器。控制、片段确认、归位和故障退出都由同一条启动流程协调。
 
@@ -53,8 +55,8 @@ LeRobot 源码必须满足 `lerobot.datasets.lerobot_dataset.CODEBASE_VERSION ==
 ## 安装
 
 ```bash
-git clone https://github.com/summer-lotso/quest3-xarm7-xhand1-capture.git
-cd quest3-xarm7-xhand1-capture
+git clone https://github.com/summer-lotso/xarm7-xhand1-vr-teleop.git
+cd xarm7-xhand1-vr-teleop
 conda env create -f environment.yml
 conda activate xarm7-xhand1-deploy
 python -m pip install -e . --no-deps
