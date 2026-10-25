@@ -44,7 +44,7 @@ flowchart TD
 | xArm 桥接器 | `xarm7-xhand1-deploy` | 左腕相对位姿映射、限幅、Cartesian Servo、机械臂反馈、归位 |
 | LeRobot v2.1 录制器 | `xhand_tele_env_310` | 遥测与相机采样、片段缓冲、确认保存 |
 
-启动器在厂商子进程里完整激活 Conda 环境。录制器通过 `PYTHONPATH` 使用 `~/projects/lerobot-v21/src` 的本地 LeRobot 源码；启动前检查 `CODEBASE_VERSION == "v2.1"`。
+启动器在厂商子进程里完整激活 Conda 环境。录制器通过 `PYTHONPATH` 使用 `~/projects/lerobot/lerobot/src`（可用runtime配置或`--lerobot-src`覆盖） 的本地 LeRobot 源码；启动前检查 `CODEBASE_VERSION == "v2.1"`。
 
 ## 数据流与控制流
 

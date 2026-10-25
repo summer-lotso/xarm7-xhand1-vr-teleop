@@ -9,6 +9,23 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from xarm7_xhand1.runtime_config import load_runtime_config
 import start_quest3_capture as launcher
 from package_capture import source_files
+from xarm7_xhand1.config import load_config
+
+
+def test_shared_hardware_optional_joint_limit_preserves_pure_vr_default(tmp_path):
+    path = tmp_path / "hardware.yaml"
+    path.write_text("xhand_joint2_max_tracking_error_rad: 0.25\n")
+    config = load_config(path)
+    assert config.xhand_joint2_max_tracking_error_rad == 0.25
+    assert config.xhand_max_tracking_error_rad == 0.08
+
+
+@pytest.mark.parametrize("value", [".nan", ".inf", "-1", "0.005"])
+def test_shared_hardware_optional_joint_limit_rejects_invalid_values(tmp_path, value):
+    path = tmp_path / "hardware.yaml"
+    path.write_text(f"xhand_joint2_max_tracking_error_rad: {value}\n")
+    with pytest.raises(ValueError, match="joint2 tracking error"):
+        load_config(path)
 
 
 def test_runtime_paths_follow_config_location(tmp_path):

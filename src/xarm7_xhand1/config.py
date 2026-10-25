@@ -30,6 +30,8 @@ class HardwareConfig:
     xhand_teleop_ready_position_deg: tuple[float, ...] | None = None
     xhand_max_step_rad: float = 0.01
     xhand_max_tracking_error_rad: float = 0.08
+    # Compatibility with shared hybrid configs; pure VR keeps its uniform bound.
+    xhand_joint2_max_tracking_error_rad: float | None = None
     xhand_state_read_retries: int = 3
     xhand_state_retry_delay_s: float = 0.1
     max_state_age_s: float = 0.2
@@ -76,6 +78,11 @@ class HardwareConfig:
             raise ValueError(
                 "xhand_max_tracking_error_rad must be at least xhand_max_step_rad"
             )
+        if self.xhand_joint2_max_tracking_error_rad is not None and (
+            not math.isfinite(self.xhand_joint2_max_tracking_error_rad)
+            or self.xhand_joint2_max_tracking_error_rad < self.xhand_max_step_rad
+        ):
+            raise ValueError("joint2 tracking error limit must be finite and at least the hand step")
         if self.xhand_state_read_retries < 1 or self.xhand_state_retry_delay_s < 0:
             raise ValueError("XHand read retries must be >= 1 and retry delay must be non-negative")
         for name in ("head_camera_rotation_deg", "front_left_camera_rotation_deg", "wrist_camera_rotation_deg"):

@@ -32,7 +32,7 @@ from xarm7_xhand1.runtime_config import load_runtime_config
 ROOT = Path(__file__).resolve().parents[1]
 VENDOR_DIR = ROOT.parent / "teleop_software_pkg"
 VENDOR_PYTHON = Path.home() / "miniconda3/envs/xhand_tele_env_310/bin/python"
-LEROBOT_SRC = ROOT.parent / "lerobot-v21/src"
+LEROBOT_SRC = ROOT.parent / "lerobot/lerobot/src"
 PORTS = (8010, 49510, 49511, 49512, 49513, 49514, 49515)
 PROXIMITY_CLOSE_ACTION = "com.oculus.vrpowermanager.prox_close"
 PROXIMITY_RESTORE_ACTION = "com.oculus.vrpowermanager.automation_disable"

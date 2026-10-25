@@ -1,0 +1,205 @@
+{
+  "audit_date": "2026-10-25",
+  "repository": "summer-lotso/xarm7-xhand1-vr-teleop",
+  "baseline_commit": "dc6c5f9",
+  "comparison_source": "local xarm7-xhand1-deploy working tree",
+  "scope": "Pure VR scripts and adapter source only. No inference about other remote repositories or new hardware validation.",
+  "intentional_packaging_differences": {
+    "scripts/package_capture.py": "Renamed archive prefix/output to match this repository.",
+    "src/xarm7_xhand1/config.py": "One explanatory comment about the hybrid-only optional field; deployed compatibility field and validation are otherwise copied."
+  },
+  "files": [
+    {
+      "path": "scripts/_common.py",
+      "deployment_sha256": "484315dc4989e74efa2cf325ff3a9290b72e43ed6883fd751f5aa8eac5454768",
+      "repository_sha256": "484315dc4989e74efa2cf325ff3a9290b72e43ed6883fd751f5aa8eac5454768",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/capture_home.py",
+      "deployment_sha256": "e9ca06251666cb9c31f1f824c6dd1c3010fad8ba3bdb86c7fd5bae145f5711dc",
+      "repository_sha256": "e9ca06251666cb9c31f1f824c6dd1c3010fad8ba3bdb86c7fd5bae145f5711dc",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/check_arm_ready.py",
+      "deployment_sha256": "9945e8347253ebb9d091bbd9ad69628fb92de6499b71df1aae4fd5c0ea9bf0a7",
+      "repository_sha256": "9945e8347253ebb9d091bbd9ad69628fb92de6499b71df1aae4fd5c0ea9bf0a7",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/check_environment.py",
+      "deployment_sha256": "7a3b9ef536f2ec26ca9768ae1cf10a29570f93596c5010d9c375318991c19c7e",
+      "repository_sha256": "7a3b9ef536f2ec26ca9768ae1cf10a29570f93596c5010d9c375318991c19c7e",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/configure_reduced_z_min.py",
+      "deployment_sha256": "ba2087507b834ce2738ad90354e4364f644192282c29c5c2f4ffd1b7efb2d436",
+      "repository_sha256": "ba2087507b834ce2738ad90354e4364f644192282c29c5c2f4ffd1b7efb2d436",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/configure_tcp.py",
+      "deployment_sha256": "dae63202d4f067c436ba4b5b541b484f3e2d681217cc25be3db89ee565d04354",
+      "repository_sha256": "dae63202d4f067c436ba4b5b541b484f3e2d681217cc25be3db89ee565d04354",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/initialize_vr_teleop.py",
+      "deployment_sha256": "4ea30e8833a13ed90c06c324e943cbb81f6af39fb0e6837c13ffa93133d9f5c2",
+      "repository_sha256": "4ea30e8833a13ed90c06c324e943cbb81f6af39fb0e6837c13ffa93133d9f5c2",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/move_hand_pose.py",
+      "deployment_sha256": "2cb2966739089c34f7139bbdfe9a8af93a045d37621c8beef98e3434f3fa2165",
+      "repository_sha256": "2cb2966739089c34f7139bbdfe9a8af93a045d37621c8beef98e3434f3fa2165",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/move_tcp_relative.py",
+      "deployment_sha256": "c5ff03fa7698e179ae50acf41f5d628f9998a4c88eb1ef32e7015ab5b79d8c04",
+      "repository_sha256": "c5ff03fa7698e179ae50acf41f5d628f9998a4c88eb1ef32e7015ab5b79d8c04",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/package_capture.py",
+      "deployment_sha256": "7799a02ff8551fb96b07bdf98b48e5605d62edde000f43727d59653c8947a7e1",
+      "repository_sha256": "00c9a61229332b31388550b4b5caeb0b73c83ec5a235045d40a5bf58d638744f",
+      "byte_identical": false
+    },
+    {
+      "path": "scripts/preview_cameras.py",
+      "deployment_sha256": "6b93d647553d2d535f9f6525b1aa6007201b15376b3b7289b5d4e1d11346e00b",
+      "repository_sha256": "6b93d647553d2d535f9f6525b1aa6007201b15376b3b7289b5d4e1d11346e00b",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/read_state.py",
+      "deployment_sha256": "46db117ba2150d23b6fdbfde7dcc2d6fb1cc1e5f7e1a5cae8fbab88f29f4a4fc",
+      "repository_sha256": "46db117ba2150d23b6fdbfde7dcc2d6fb1cc1e5f7e1a5cae8fbab88f29f4a4fc",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/record_vr_episode_stream.py",
+      "deployment_sha256": "f1bbd041e22ac0091ca167b053661ce0c3b9a5346d5a80866cbf163c26dbef81",
+      "repository_sha256": "f1bbd041e22ac0091ca167b053661ce0c3b9a5346d5a80866cbf163c26dbef81",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/return_arm_home.py",
+      "deployment_sha256": "9428fd3a2ac2395b70e9bb37a3389eaca5e11261448a865dfa2a5d734f172060",
+      "repository_sha256": "9428fd3a2ac2395b70e9bb37a3389eaca5e11261448a865dfa2a5d734f172060",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/run_official_vr_xarm_bridge.py",
+      "deployment_sha256": "7f1196ce128ba23d378da035e42b70fdd65f1cafdf857a01d5cba8f57bc687e3",
+      "repository_sha256": "7f1196ce128ba23d378da035e42b70fdd65f1cafdf857a01d5cba8f57bc687e3",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/run_official_xhand_with_telemetry.py",
+      "deployment_sha256": "c92c78d55d5202f1d2406598db1900eee7a793d547cd9797b5a23ca08361cf70",
+      "repository_sha256": "c92c78d55d5202f1d2406598db1900eee7a793d547cd9797b5a23ca08361cf70",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/run_xhand_vr_bridge.py",
+      "deployment_sha256": "dfb797a520095cc6e959575456ff87c441f4c4076a4b242013c08f744d71294c",
+      "repository_sha256": "dfb797a520095cc6e959575456ff87c441f4c4076a4b242013c08f744d71294c",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/start_quest3_capture.py",
+      "deployment_sha256": "a613e4f2fe089381d2836f2d5c43fd33065c4e4377d12a6c13e6685129baa3d1",
+      "repository_sha256": "a613e4f2fe089381d2836f2d5c43fd33065c4e4377d12a6c13e6685129baa3d1",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/test_motion.py",
+      "deployment_sha256": "a61fa8e3f63d4bbd798dc81aeef28b562a886206327586857eef46db44f30b2c",
+      "repository_sha256": "a61fa8e3f63d4bbd798dc81aeef28b562a886206327586857eef46db44f30b2c",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/usb_webxr_relay.py",
+      "deployment_sha256": "20cdb00b517ed5a774a20aaaaa9f398e27089c0ceb04244ddfb4c55344198af0",
+      "repository_sha256": "20cdb00b517ed5a774a20aaaaa9f398e27089c0ceb04244ddfb4c55344198af0",
+      "byte_identical": true
+    },
+    {
+      "path": "scripts/validate_home.py",
+      "deployment_sha256": "f59ba5302ba115480fd04df9396f3b7abad855e196ecc95a10d9828cbe8da758",
+      "repository_sha256": "f59ba5302ba115480fd04df9396f3b7abad855e196ecc95a10d9828cbe8da758",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/__init__.py",
+      "deployment_sha256": "77975898dd6378d4d377fb750de4bd569e302b924e041cd4dc3ca95c399dff11",
+      "repository_sha256": "77975898dd6378d4d377fb750de4bd569e302b924e041cd4dc3ca95c399dff11",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/arm.py",
+      "deployment_sha256": "80fa331ad8d1784169b121ee6b33ed7e71436af4fdf0d691f75acaa053896774",
+      "repository_sha256": "80fa331ad8d1784169b121ee6b33ed7e71436af4fdf0d691f75acaa053896774",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/arm_check.py",
+      "deployment_sha256": "110046d03ea51d744297b909985490a41b148366cbf4f4f36699788d438950e6",
+      "repository_sha256": "110046d03ea51d744297b909985490a41b148366cbf4f4f36699788d438950e6",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/cameras.py",
+      "deployment_sha256": "18cb34ccb9bc5a1bc1023c46c0f5fcfe9e277255ffd5bc8c33d8bf58ce3b1a3f",
+      "repository_sha256": "18cb34ccb9bc5a1bc1023c46c0f5fcfe9e277255ffd5bc8c33d8bf58ce3b1a3f",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/config.py",
+      "deployment_sha256": "c47fe5247454b9c04cdec124aea7521a8d09a80c9c1f874241626c20bd3683c9",
+      "repository_sha256": "601848b241be5c74cc3fb318b9e48bcc0380fe5d45527b79c8a0927baef56e40",
+      "byte_identical": false
+    },
+    {
+      "path": "src/xarm7_xhand1/hand.py",
+      "deployment_sha256": "62f5fe587c24cf3477ff46bb1783fee123d18e6aa38bf66dce6a962ef3131557",
+      "repository_sha256": "62f5fe587c24cf3477ff46bb1783fee123d18e6aa38bf66dce6a962ef3131557",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/official_vr.py",
+      "deployment_sha256": "e56bb75cd240d022a2931cfd66b6e55180af00ad7562f754a8b44a46324f20c3",
+      "repository_sha256": "e56bb75cd240d022a2931cfd66b6e55180af00ad7562f754a8b44a46324f20c3",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/policy_client.py",
+      "deployment_sha256": "a7f50e81e6c8725528d1c5008f2ec1b4586686ca1719fd28a2f9a983e6a8ce4e",
+      "repository_sha256": "a7f50e81e6c8725528d1c5008f2ec1b4586686ca1719fd28a2f9a983e6a8ce4e",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/recording.py",
+      "deployment_sha256": "926113b4a27605412be3252b3ccbdb4600c67f30fa884092ef3c0a1768772b94",
+      "repository_sha256": "926113b4a27605412be3252b3ccbdb4600c67f30fa884092ef3c0a1768772b94",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/robot.py",
+      "deployment_sha256": "744c16997320625c6ebb7cb756114cef5ca0778df1769d099393c235783a5795",
+      "repository_sha256": "744c16997320625c6ebb7cb756114cef5ca0778df1769d099393c235783a5795",
+      "byte_identical": true
+    },
+    {
+      "path": "src/xarm7_xhand1/runtime_config.py",
+      "deployment_sha256": "bd196381e8090fcf6755e2f63b3a6949657525d085a7ffbff1c5f133c7896c06",
+      "repository_sha256": "bd196381e8090fcf6755e2f63b3a6949657525d085a7ffbff1c5f133c7896c06",
+      "byte_identical": true
+    }
+  ]
+}

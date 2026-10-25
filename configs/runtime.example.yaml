@@ -4,7 +4,7 @@ hardware_config: hardware.local.yaml
 vendor_dir: ../../teleop_software_pkg
 vendor_config: ../../teleop_software_pkg/config_meta_quest_usb.yaml
 vendor_python: ~/miniconda3/envs/xhand_tele_env_310/bin/python
-lerobot_src: ../../lerobot-v21/src
+lerobot_src: ../../lerobot/lerobot/src
 task: Pick up object and place it in the tray
 root: ../datasets/quest3_xarm7_xhand1_v21
 repo_id: local/xarm7_xhand1_quest3
